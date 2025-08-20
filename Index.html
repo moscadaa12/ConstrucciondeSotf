@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Construcción de Software</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #34495e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .infographic-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section-title {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .card {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .card-title {
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        li:before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .highlight {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 3px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        .process-flow {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .process-step {
+            text-align: center;
+            width: 150px;
+            padding: 15px;
+            background: white;
+            border: 2px solid var(--secondary);
+            border-radius: 8px;
+            z-index: 2;
+        }
+        
+        .process-step:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--secondary);
+            z-index: 1;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--dark);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .two-columns {
+                flex-direction: column;
+            }
+            
+            .process-flow {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .process-step {
+                margin-bottom: 20px;
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .process-step:before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <header>
+            <h1>La Construcción de Software</h1>
+            <p class="intro">Proceso fundamental en el ciclo de vida del desarrollo de software que involucra la creación de software funcional mediante codificación, integración y pruebas.</p>
+        </header>
+        
+        <div class="section">
+            <h2 class="section-title">Integración en el Ciclo de Vida (SDLC)</h2>
+            <div class="two-columns">
+                <div class="column">
+                    <div class="card">
+                        <h3 class="card-title">Modelos Secuenciales</h3>
+                        <p>En modelos como el <span class="highlight">modelo en cascada</span>, la construcción comienza después de completar las fases de análisis de requisitos, diseño y planificación.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <h3 class="card-title">Modelos Iterativos</h3>
+                        <p>En enfoques como <span class="highlight">Scrum</span>, prototipado evolutivo o programación extrema, la construcción puede ocurrir de forma concurrente con otras actividades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Actividades Principales</h2>
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-title">Codificación</div>
+                    <p>Escritura del código con enfoque en calidad, seguridad y documentación</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-title">Integración</div>
+                    <p>Combinación de partes construidas por separado con planificación adecuada</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-title">Pruebas</div>
+                    <p>Pruebas unitarias y de integración para detectar fallos tempranamente</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-title">Reutilización</div>
+                    <p>Uso formal de componentes existentes para mejorar eficiencia</p>
+                </div>
+            </div>
+            
+            <div class="two-columns">
+                <div class="column">
+                    <h3>Aspectos Clave de la Codificación</h3>
+                    <ul>
+                        <li>Elección adecuada de nombres para identificadores</li>
+                        <li>Organización lógica (alta cohesión, bajo acoplamiento)</li>
+                        <li>Modularidad (clases y paquetes)</li>
+                        <li>Manejo de errores y gestión de recursos</li>
+                        <li>Seguridad (prevención de vulnerabilidades)</li>
+                        <li>Optimización del rendimiento</li>
+                        <li>Documentación (comentarios y documentos externos)</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Aseguramiento de la Calidad</h3>
+                    <ul>
+                        <li>Pruebas con diferentes tasas de detección de defectos</li>
+                        <li>Inspección de software (60% de detección promedio)</li>
+                        <li>Revisiones técnicas formales</li>
+                        <li>Análisis estático del código</li>
+                        <li>Rediseño para corregir deficiencias no anticipadas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Lenguajes y Mejores Prácticas</h2>
+            <div class="two-columns">
+                <div class="column">
+                    <h3>Tipos de Lenguajes</h3>
+                    <ul>
+                        <li>Lenguajes de programación de propósito general</li>
+                        <li>Lenguajes de configuración</li>
+                        <li>Lenguajes de kit de herramientas</li>
+                        <li>Lenguajes de alto nivel (C++, Java, etc.) ofrecen mejor productividad, fiabilidad y comprensibilidad</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Mejores Prácticas</h3>
+                    <ul>
+                        <li>Minimizar la complejidad</li>
+                        <li>Anticipar cambios (software extensible)</li>
+                        <li>Construir para la verificación</li>
+                        <li>Aplicar ocultamiento de información</li>
+                        <li>Promover la reutilización</li>
+                        <li>Adherirse a estándares (UML, documentación)</li>
+                        <li>Usar abstracción de datos</li>
+                        <li>Aplicar programación defensiva</li>
+                        <li>Gestionar adecuadamente el manejo de errores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Relación con Desarrollo e Ingeniería de Software</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Ingeniería de Software</th>
+                    <th>Desarrollo de Software</th>
+                </tr>
+                <tr>
+                    <td>Enfoque</td>
+                    <td>Más amplio y estratégico</td>
+                    <td>Más específico y centrado en aplicaciones</td>
+                </tr>
+                <tr>
+                    <td>Alcance</td>
+                    <td>Ciclo de vida completo de sistemas complejos</td>
+                    <td>Creación de aplicaciones o programas concretos</td>
+                </tr>
+                <tr>
+                    <td>Responsabilidad</td>
+                    <td>Diseño, desarrollo y mantenimiento aplicando principios de ingeniería</td>
+                    <td>Escritura, prueba y mantenimiento del código</td>
+                </tr>
+                <tr>
+                    <td>Objetivo</td>
+                    <td>Creación de software confiable y de calidad mediante conocimiento científico</td>
+                    <td>Creación y construcción de aplicaciones específicas</td>
+                </tr>
+            </table>
+        </div>
+        
+        <footer>
+            <p>Infografía basada en el documento "La construcción de software es un proceso fundamental en el ciclo de vida del desarrollo de software"</p>
+        </footer>
+    </div>
+</body>
+</html>
